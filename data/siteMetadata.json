@@ -1,8 +1,8 @@
 {
   "title": "97 things every programmer should know",
-  "author": "Tails Azimuth",
+  "author": "ex-jocv",
   "headerTitle": "97 things every programmer should know",
-  "description": "A blog created with Next.js and Tailwind.css",
+  "description": "Lao translation of '97 things every programmer should know'",
   "language": "en-us",
   "siteUrl": "https://97-things-every-programmer-should-know-lao.vercel.app/",
   "siteRepo": "https://github.com/hiramoto/97-things-every-programmer-should-know-lao",
