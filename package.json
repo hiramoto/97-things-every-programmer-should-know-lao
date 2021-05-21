@@ -21,8 +21,11 @@
     "autoprefixer": "^10.2.5",
     "gray-matter": "^4.0.2",
     "image-size": "1.0.0",
+    "imagemin-mozjpeg": "^9.0.0",
+    "imagemin-optipng": "^8.0.0",
     "next": "10.2.0",
     "next-mdx-remote": "^3.0.1",
+    "next-optimized-images": "^2.6.2",
     "next-seo": "4.24.0",
     "next-themes": "^0.0.14",
     "postcss": "^8.2.15",
@@ -36,7 +39,8 @@
     "remark-footnotes": "^3.0.0",
     "remark-math": "^3.0.1",
     "remark-slug": "6.0.0",
-    "tailwindcss": "^2.1.1"
+    "tailwindcss": "^2.1.1",
+    "webp-loader": "^0.6.0"
   },
   "devDependencies": {
     "@next/bundle-analyzer": "10.2.0",
