@@ -6,10 +6,12 @@ draft: false
 ---
 
 # Ask "What Would the User Do?" (You Are not the User)
+# ຖາມ "ຜູ້ນຳໃຊ້ຊິເຮັດຫຍັງ?" (ເຈົ້າບໍ່ແມ່ນຜູ້ນຳໃຊ້)
 
 We all tend to assume that other people think like us. But they don't. 
 Psychologists call this the false consensus bias. 
 When people think or act differently to us, we're quite likely to label them (subconsciously) as defective in some way.  
+
 ພວກເຮົາມັກຄິດວ່າຄົນອື່ນຊິຄິດຄ້າຍກັນກົບເຈົ້າ. ແຕ່ວ່າເຂົາເຈົ້າບໍ່ແມ່ນ.
 ນັກຄົ້ນຄວ້າຈິດໃຈເອີ້ນນີ້ວ່າ false consensus bias (ອະຄະຕິການຕົກລົງຢ່າງບໍ່ຈິງ).
 ເວລາຄົນອື່ນຄິດ ຫຼື ເຮັດ ຕ່າງກັນກັບເຈົ້າ, ເຈົ້າມັກຄິດພວກເຂົ້າ (ໂດຍບໍ່ຮູ້ຕົວ) ເປັນອອນໃນບາງທາງ.  
@@ -19,19 +21,75 @@ Users don't think like programmers. For a start, they spend much less time using
 They neither know nor care how a computer works. 
 This means they can't draw on any of the battery of problem-solving techniques so familiar to programmers. 
 They don't recognize the patterns and cues programmers use to work with, through, and around an interface.  
+
 ການອຽງໄປນີ້ອະທິບາຍເປັນຫຍັງນັກຂຽນໂຄດປະເຊີນໜ້າສະຖານະການກະຕວງຄວາມແນວຄິດຂອງຜູ້ນຳໃຊ້.
 ຜູ້ນຳໃຊ້ຄິດຕ່າງກັນກັບນັກຂຽນໂຄດ. ທຳອິດ, ພວກເຂົາໃຊ້ເວລານ້ອຍກັບຄອມພິວເຕີ. 
 ພວກເຂົາບໍ່ຮູ້ ຫຼື ບໍ່ມີຄວາມສົນໃຈຄອມພິວເຕີເຮັດວຽກແນວໃດ.
 ນີ້ໝາຍເຖິງວ່າພວກເຂົານຳໃຊ້ເຕັກໂນໂນຢີແກ້ໄຂບັນຫາຍບໍ່ໄດ້. ເຕັກໂນໂນຢີຈຳນວນຫຼາຍແລະຢູ່ໃກ້ມືຂອງນັກຂຽນໂຄດ.  
 ນັກຂຽນໂຄດຮັບຮູ້ແບບແລະເບາະແສເວລາເຮັດວຽກກ່ຽວກັບ interface. ແຕ່ວ່າຜູ້ນຳໃຊ້ເຮັດນັ້ນບໍ່ໄດ້.
 
-The best way to find out how users think is to watch one. Ask a user to complete a task using a similar piece of software to what you're developing. Make sure the task is a real one: "Add up a column of numbers" is OK; "Calculate your expenses for the last month" is better. Avoid tasks that are too specific, such as "Can you select these spreadsheet cells and enter a *SUM* formula below?" — there's a big clue in that question. Get the user to talk through his or her progress. Don't interrupt. Don't try to help. Keep asking yourself "Why is he doing that?" and "Why is she not doing that?"
+The best way to find out how users think is to watch one. 
+Ask a user to complete a task using a similar piece of software to what you're developing. 
+Make sure the task is a real one: "Add up a column of numbers" is OK; "Calculate your expenses for the last month" is better. 
+Avoid tasks that are too specific, such as "Can you select these spreadsheet cells and enter a *SUM* formula below?" 
+— there's a big clue in that question. 
+Get the user to talk through his or her progress. 
+Don't interrupt. Don't try to help. Keep asking yourself "Why is he doing that?" and "Why is she not doing that?"  
 
-The first thing you'll notice is that users do a core of things similarly. They try to complete tasks in the same order — and they make the same mistakes in the same places. You should design around that core behavior. This is different from design meetings, where people tend to be listened to for saying "What if the user wants to...?" This leads to elaborate features and confusion over what users want. Watching users eliminates this confusion.
+ວິທີການທີ່ດີທີ່ສຸດເພື່ອໄດ້ຮູ້ຄວາມແນວຄິດຂອງຜູ້ນຳໃຊ້ແມ່ນເບິ່ງຜູ້ນຳໃຊ້.
+ຂໍຮ້ອງຜູູ້ນຳໃຊ້ວ່າປະຕິບັດວຽກການກັບລະບົບຄ້າຍຄືກັບລະບົບເຈົ້າກຳລັງພັດທະນາ.
+ເຮັດໃຫ້ແນ່ໃຈວ່າວຽກການແມ່ນແທ້ຈິງ: "ຕື່ມຖັນໜຶ່ງທີ່ມີຄ່າໂຕແລກ"ແມ່ນຖືກແລ້ວ; "ຄິດໄລຄ່າໃຊ້ຈ່າຍຕົນເອງເດື  ອນຜ່ານມາ" ແມ່ນດີກວ່າ.  
+ຫຼີກລ່ຽງວຽກການທີ່ເປັນເສັກໆນ້ອຍໆ, ຄື "ເລືອກຫ້ອງ spreadsheed ເຫຼົານີ້ ແລ້ວພິມສູດ *SUM* ຢູ່ລຸ່ມໄດ້ບໍ?"
+— ມີເບາະແສໃຫຍ່ໃນຄຳຖາມນັ້ນ.
+ໃຫ້ຜູ້ນຳໃຊ້ລົມກ່ຽວກັບກ້າວໜ້າຂອງລາວ.
+ຢ່າຂັດຂວາງຜູ້ນຳໃຊ້. ຢ່າລອງຊ່ວຍຜູ້ນຳໃຊ້. ສືບຕໍ່ຖາມຕົນເອງຄຳຖາມວ່າ "ເປັນຫຍັງລາວເຮັດນັ້ນ?" ແລະ "ເປັນຫຍັງລາວບໍ່ໄດ້ເຮັດນັ້ນ?"  
 
-You'll see users getting stuck. When you get stuck, you look around. When users get stuck, they narrow their focus. It becomes harder for them to see solutions elsewhere on the screen. It's one reason why help text is a poor solution to poor user interface design. If you must have instructions or help text, make sure to locate it right next to your problem areas. A user's narrow focus of attention is why tool tips are more useful than help menus.
 
-Users tend to muddle through. They'll find a way that works and stick with it no matter how convoluted. It's better to provide one really obvious way of doing things than two or three shortcuts.
-You'll also find that there's a gap between what users say they want and what they actually do. That's worrying as the normal way of gathering user requirements is to ask them. It's why the best way to capture requirements is to watch users. Spending an hour watching users is more informative than spending a day guessing what they want.
+The first thing you'll notice is that users do a core of things similarly. 
+They try to complete tasks in the same order — and they make the same mistakes in the same places. 
+You should design around that core behavior. 
+This is different from design meetings, where people tend to be listened to for saying "What if the user wants to...?" 
+This leads to elaborate features and confusion over what users want. 
+Watching users eliminates this confusion.
 
-by [Giles Colborne](http://programmer.97things.oreilly.com/wiki/index.php/Giles_Colborne)
+ທຳອິດ, ເຈົ້າຊິຮັບຮູ້ວ່າຜູ້ນຳໃຊ້ເຮັດວຽກຄືກັນ.
+ພວກເຂົາສຳເລັດວຽກການໃນຂັ້ນຕອນດຽວກັນ — ແລະ ພວກເຂົາເຮັດຜິດບ່ອນດຽວກັນ. 
+ເຈົ້າຄວນເປັນອອກແບບກ່ຽວກັບການປະພຶດຕົນ.
+ນີ້ແມ່ນຕ່າງກັນກັບກອງປະຊຸມການອອກແບບ, ໃນກອງປະຊຸມນັ້ນມັກຖາມວ່າ "ສົມມຸດວ່າຜູ້ນຳໃຊ້ຢາກເຮັດ...?" 
+ມັນນຳໄປສູ່ຄວາມສາມາດຢ່າງຫຍຸ້ງຍາກ ແລະ ຄວາມສັບສົນກ່ຽວກັບຜູ້ນຳໃຊ້ຢາກໄດ້ຫຍັງ.
+ການສັງເກດຜູ້ນຳໃຊ້ເອົາບັນຫານີ້ອອກ.
+
+You'll see users getting stuck. 
+When you get stuck, you look around. 
+When users get stuck, they narrow their focus. 
+It becomes harder for them to see solutions elsewhere on the screen. 
+It's one reason why help text is a poor solution to poor user interface design. 
+If you must have instructions or help text, make sure to locate it right next to your problem areas. 
+A user's narrow focus of attention is why tool tips are more useful than help menus.
+
+ເວລາມີບັນຫາຢ່າງລຳບາກ, ລາດຕະເວນໃກ້ໆ.
+ເວລາຜູ້ນຳໃຊ້ບໍ່ຮູ້ເຮັດແນວໃດເດີ, ພວກເຂົາເບິ່ງແຕ່ບາງສ່ວນ.
+ມັນເຮັດໃຫ້ຍາກກ່ວາໃຫ້ຜູ້ນຳໃຊ້ຫາວິທີແກ້ໄຂບັນຫາຢູ່ບ່ອນອື່ນໃນໜ້າຈໍ.
+ນີ້ແມ່ນເຫດຜົນເປັນຫຍັງໂຕໜັງສືແມ່ນວິທີແກ້ໄຂອ່ອນສຳລັບການອອກແບບໜ້າຈໍອ່ອນ.
+ສົມມຸດວ່າເຈົ້າຈຳເປັນມີຄຳແນະນຳ ຫຼື ໂຕໜັງສື, ໃຫ້ແນ່ໃຈວ່າມັນຊິສະແດງຢູ່ຄຽງຂ້າງຂອງບັນຫາ.
+Tool tips (ເຄື່ອງມືແນະນຳ) ມີປະໂຫຍດຫຼາຍກວ່າ help menus (ເມນູຊ່ວຍເຫຼືອ). ເພາະວ່າຜູ້ນຳໃຊ້ມີຄວາມຕັ້ງໃຈຢ່າງແຄບ.
+
+Users tend to muddle through. 
+They'll find a way that works and stick with it no matter how convoluted. 
+It's better to provide one really obvious way of doing things than two or three shortcuts.
+
+ຜູ້ນຳໃຊ້ມັກເຮັດໃຫ້ງົງ. 
+ຜູ້ນຳໃຊ້ຊິຫາວິທີ ແລະ ຍຶດຖືວິທີນັ້ນທັງໆທີ່ເປັນສັບສົນ. 
+ການອຸປະຖຳວິທີເຮັດອັນໜຶ່ງເຂົ້າໃຈງ່າຍດີກວ່າທາງລັດ 2 ຫຼື 3 ອັນ.
+
+You'll also find that there's a gap between what users say they want and what they actually do. 
+That's worrying as the normal way of gathering user requirements is to ask them. 
+It's why the best way to capture requirements is to watch users. 
+Spending an hour watching users is more informative than spending a day guessing what they want.
+
+ເຈົ້າຊິຮູ້ວ່າສິ່ງທີ່ຜູ້ນຳໃຊ້ເວົ້າ ແລະ ສິ່ງທີ່ຜູ້ນຳໃຊ້ເຮັດແທ້ຈິງແມ່ນບໍ່ຄືກັນ.
+ມັນເຮັດເຈົ້າຮູ້ສຶກກັງວົນເພາະວ່າວິທີຫາຂໍຮ້ອງຂອງຜູ້ນຳໃຊ້ທຳມະດາແມ່ນການຖາມຜູ້ນຳໃຊ້.
+ນີ້ແມ່ນເຫດຜົນເປັນຫຍັງວິທີຈັບກຸມຂໍຮ້ອງຂອງດີທີ່ສຸດແມ່ນເບິ່ງຜູ້ນຳໃຊ້.
+ການນຳໃຊ້ເວລາຊົ່ວຳມງໜຶ່ງສັງເກດຜູ້ນຳໃຊ້ມີຂໍຮຽນຫຼາຍກວ່າການນຳໃຊ້ເວລາຄາດສົ່ງທີ່ຜູ້ນຳໃຊ້ຢາກໄດ້ຫຍັງ.
+
+ໂດຍ [Giles Colborne](http://programmer.97things.oreilly.com/wiki/index.php/Giles_Colborne)
