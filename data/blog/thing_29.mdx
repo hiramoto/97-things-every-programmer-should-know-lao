@@ -1,0 +1,90 @@
+---
+title: 'Don't Repeat Yourself ບໍ່ໃຫ້ຊ້ຳກັນຫຼາຍເທື່ອ'
+date: '2018-08-15'
+tags: ['writings', 'book', 'reflection']
+draft: false
+---
+
+# Don't Repeat Yourself ບໍ່ໃຫ້ຊ້ຳກັນຫຼາຍເທື່ອ
+
+Of all the principles of programming, Don't Repeat Yourself (DRY) is perhaps one of the most fundamental. 
+The principle was formulated by Andy Hunt and Dave Thomas in *The Pragmatic Programmer*, and underlies many other well-known software development best practices and design patterns. 
+The developer who learns to recognize duplication, and understands how to eliminate it through appropriate practice and proper abstraction, 
+can produce much cleaner code than one who continuously infects the application with unnecessary repetition.
+
+ໃນລັກການໂປລແກັລມມິງ, Don't Repeat Yourself (DRY) ບໍ່ໃຫ້ຊ້ຳກັນຫຼາຍເທື່ອ, ແມ່ນລັກການສຳຄັນຫຼາຍສຸດ.
+ລັກການນີ້ຖືກຍື່ນຄຳຮ້ອງດ້ວຍ Andy Hunt ແລະ Dave Thomas ໃນປຶ້ມ "ນັກຂຽນໂຄດມຢ່າງແທ່ຈິງ", ແລະ ແມ່ນຮາກຖານໃນການປະຕິບັດທີ່ດີມີຊື່ສຽງໃນການພັດທະນາຊອບແວແລະລາຍການອອກແບບ.
+ນັກພັດທະນາຜູ້ຮຽນແລະຮັບຮູ້ຄວາມຊ້ຳ ແລະ ຮູ້ຈັກວິທີແກ້ໄຂຄວາມຊ້ຳດ້ວຍການປະຕິບັດຢ່າງເໝາະສົມ ແລະ ການເຮັດນາມມະຍົດຢ່າງເໝາະສົມ,
+ນັກພັດທະນານັ້ນສາມາດຂຽນໂຄດທີ່ເປັນສະອາດກວ່ານັກພັດນາຜູ້ເພີ່ມຄວາມຊ້ຳໃສ່ໂຄດຕື່ມເລື້ອຍໆ.
+
+## Duplication is waste ຄວາມຊ້ຳແມ່ນຄວາມສິ້ນເປືອງ
+---
+
+Every line of code that goes into an application must be maintained, and is a potential source of future bugs. 
+Duplication needlessly bloats the codebase, resulting in more opportunities for bugs and adding accidental complexity to the system. 
+The bloat that duplication adds to the system also makes it more difficult for developers working with the system to fully understand the entire system, 
+or to be certain that changes made in one location do not also need to be made in other places that duplicate the logic they are working on. 
+DRY requires that "every piece of knowledge must have a single, unambiguous, authoritative representation within a system."
+
+ທຸກໆແຖວຂອງໂຄດທີ່ຊິເຂົ້າໃນແອັບຕ້ອງຖືກດູແລ ແລະ ທຸກໆແຖວຂອງໂຄດອາດຈະຊິເປັນ bug (ບັນຫາຂອງແອັບ) ໃນອະນາຄົດ.
+ຄວາມຊ້ຳເຮັດໃຫ້ codebase (ສະບັບໂຄດ) ຕຸ້ຍຂຶ້ນໂດຍບໍ່ມີຄວາມໝາຍ, ແລະ ມັນເຮັດໃຫ້ມີຄວາມເປັນໄປໄດ້ສຳຫຼັບ bugs (ບັນຫາຂອງແອັບ) ຫຼາຍກວ່າ ແລະ ມັນເພີ່ມຂຶ້ນຄວາມສັບສົນໂດຍບໍ່ຮູ້ສຶກ.
+ການຕຸ້ຍຂຶ້ນຂອງລະບົບດ້ວຍຄວາມຊ້ຳກະເຮັດໃຫ້ນັກພັດທະນາເຂົ້າໃຈຍາກກວ່າລະບົບໂດຍລວມຢ່າງສົມບູນ, ຫຼື ເຮັດໃຫ້ນັກພັດທະນາໝັ້ນໃຈວ່າການປ່ຽນແປງຂອງໂຄດໃນບ່ອນໜຶ່ງບໍ່ຈຳເປັນເຮັດໃນບ່ອນອື່ນທີ່ມີໂຄດມີໜ້າທີຄືກັນ.
+ລັກການ DRY ຮ້ອງຂໍວ່າ ທຸກໆຄວາມຮູ້ຈຳເປັນມີການສະແດງອັນດຽວ, ຢ່າງຈະແຈ້ງ ແລະ ຢ່າງເໝາະສົມໃນລະບົບ.
+
+Repetition in process calls for automation ຄວາມຊ້ຳໃນອາການກຳເລີບຮ້ອງຂໍການປະຕິບັດຢ່າງອັດຕະໂນມັດ
+---
+
+Many processes in software development are repetitive and easily automated. 
+The DRY principle applies in these contexts as well as in the source code of the application. 
+Manual testing is slow, error-prone, and difficult to repeat, so automated test suites should be used, if possible. 
+Integrating software can be time consuming and error-prone if done manually, so a build process should be run as frequently as possible, ideally with every check-in. 
+Wherever painful manual processes exist that can be automated, they should be automated and standardized. 
+The goal is to ensure there is only one way of accomplishing the task, and it is as painless as possible.
+
+ວິທີການເຮັດສ່ວນໃຫຍ່ໃນການພັດທະນາຊອບແວມີຄວາມຊ້ຳ ແລະ ສະມາດໃຫ້ເຮັດຢ່າງອັດຕະໂນມັດຢ່າງງ່າຍ.
+ຫຼັກການ DRY ນຳມາໃຊ້ໃນກໍລະນີແບບນີ້ ແລະ ໃນກໍລະນີ້ການຂຽນໂຄດຂອງຊອບແວ.
+ການກວດດ້ວຍມືແມ່ນຊ້າ, ມັກເຮັດຜິດ, ແລະ ເຮັດອີກເທື່ອໜຶ່ງຍາກ, ສະນັ້ນ ພວກເຮົາຄວນເປັນເລືອກການກວດຢ່າງອັດຕະໂນມັດຖ້າ, ຖ້າເປັນໄປໄດ້.
+ຖ້າເຮັດດ້ວຍມື, ການຮ່ວມໜວຍຊອບແວຊິເສຍເວລາ ແລະ ມັນມີການຜິດ, ສະນັ້ນວິທີການການກໍ່ສ້າງ (build process) ຄວນເຮັດເລືອຍໆເທົ່າທີ່ຈະເຮັດໄດ້, ຫວັງວ່າທຸກໆ check-in (ການລົງທະບຽນ ແລະ ການປັບປຸງ).
+ໃນກໍລະນີວິທີການດ້ວຍມືຢ່າງຂີ້ຄ້ານ, ວິທີການນັ້ນສະມາດໃຫ້ເຮັດຢ່າງອັດຕະໂນມັດ ແລະ ເປັນມາດຕະຖານ.
+ເປົ້າໝາຍຂອງໂຕນີ້ແມ່ນການຮັບປະກັນວ່າມີວິທີອັນດຽວເພື່ອສຳເລັດວຽກການ, ແລະ ວິທີນັ້ນແມ່ນສະບາຍທີ່ສຸດ.
+
+Repetition in logic calls for abstraction ຄວາມຊ້ຳໃນການຕາມເຫດຜົນຮ້ອງຂໍການລາຍການຫຍໍ້
+---
+
+Repetition in logic can take many forms. 
+Copy-and-paste *if-then* or *switch-case* logic is among the easiest to detect and correct. 
+Many design patterns have the explicit goal of reducing or eliminating duplication in logic within an application. 
+If an object typically requires several things to happen before it can be used, this can be accomplished with an Abstract Factory or a Factory Method. 
+If an object has many possible variations in its behavior, these behaviors can be injected using the Strategy pattern rather than large *if-then* structures. 
+In fact, the formulation of design patterns themselves is an attempt to reduce the duplication of effort required to solve common problems and discuss such solutions.
+In addition, DRY can be applied to structures, such as database schema, resulting in normalization.
+
+ຄວາມຊ້ຳໃນໃນການຕາມເຫດຜົນມີຫຼາຍແບບ.
+ການສຳເນົາ ແລະ ຕິດ ການຕາມເຫດຜົນ  *if-then* ຫຼື *switch-case* ແມ່ນແບບໜຶ່ງທີ່ຫາງ່າຍແລະແກ່ງ່າຍ.
+Design Patterns (ລາຍການອອກແບບ) ສ່ວນຫຼາຍມີເປົ້າໝາຍຢ່າງຈະແຈ້ງວ່າເຮັດໃຫ້ຄວາມຊ້ຳໜ້ອຍລົງ ຫຼື ຕັດຄວາມຊ້ຳອອກໃນການຕາມເຫດຜົນໃນແອັບ.
+ຖ້າວ່າ object (ວັດຖຸ) ຕ້ອງໄດ້ມີການປະຕິບັດວຽກກ່ອນທີ່ຈະ object ຊິເປັນນຳໃຊ້ໄດ້, ນັກພັດທະນາເຮັດນັ້ນໄດ້ດ້ວຍ Abstract Factory (ນາມມະຍົດໂຮງງານ) ຫຼື Factory Method (Method ໂຮງງານ). 
+ຖ້າວ່າ object (ວັດຖຸ) ຄວາມປະພຶດຫຼາຍຊະນິດ, ຄວາມປະພຶດຫຼາຍຊະນິດນີ້ສາມາດຖືກກຳນົດໄວ້ດ້ວຍ Strategy pattern (ແບບ ຍຸດທະສາດ) ບໍ່ແມ່ນດ້ວຍ  *if-then* structures (ໂຄງສ້າງ ຖ້າວ່າ-ຄັນຊັ້ນ). 
+ອັນທີ່ຈິງແລ້ວ ການສ້າງ design patterns (ລາຍການອອກແບບ) ແມ່ນການລອງເບິ່ງເພື່ອເຮັດໃຫ້ຄວາມຊ້ຳຂອງຄວາມພະຍາຍາມຫຼຸດລົງ. ຄວາມພະຍາຍາມຈຳເປັນມີເພື່ອແກ່ໄຂບັນຫາທົ່ວໄປ ແລະ ເຈລະຈາວິທີແກ່ໄຂລັນຫາ.
+ອີກອັນໜຶ່ງແມ່ນ, ຫຼກການ DRY ສາມາດນຳໃຊ້ ໃຫ້ໂຄງສ້າງ, ຕົວຢ່າງ schema (ແບບແຜນ) ຖານຂໍ້ມູນ, ຊິເປັນ normalization (ກັບຄືນສູ່ສະພາບປົກກະຕິ).
+
+A Matter of principle ບັນຫາຂອງຫຼັກການ
+---
+
+Other software principles are also related to DRY. 
+The Once and Only Once principle, which applies only to the functional behavior of code, can be thought of as a subset of DRY. 
+The Open/Closed Principle, which states that "software entities should be open for extension, but closed for modification," only works in practice when DRY is followed. 
+Likewise, the well-known Single Responsibility Principle requires that a class have "only one reason to change," relies on DRY.
+
+ຫຼັກການຊອບແວອື່ນມີກ່ຽວຂ້ອງກັບ DRY.
+ຫຼັກການ The Once and Only Once (ເທື່ອໜຶ່ງ ແລະ ເທື່ອດຽວ), ມັນແມ່ນນຳມາໃຊ້ຄວາມເຮັດວຽກຂອງໂຄດເທົ່ານັ້ນ, ຫຼັກການນັ້ນຊະນິດໜຶ່ງຂອງ DRY.
+ຫຼັກການ Open/Closed (ເປີດ ແລະ ປິດ), ໝາຍເຖິງວ່າ "ຊອບແວຄວນເປີດໃຫ້ extension (ການຂະຫຍາຍ) ແຕ່ ປິດໃຫ້ modification (ການກວດແກ້)," ມັນແມ່ນຖືກຕ້ອງແທ້ຈິງເວລາໂຄດອີນຕາມຫຼັກການ DRY.
+ເຊັ່ນດຽວກັນ, ຫຼັກການ Single Responsibility Principle (ຫຼັກການການມີໜ້າວຽກອັນດຽວ) ວ່າ class ໜຶ່ງ ມີ"ເຫດຜົນອັນດຽວເພື່ອປັບປຸງ," ຫຼັກການນີ້ກໍ່ໄວ້ໃຈຫຼັກການ DRY.
+
+When followed with regard to structure, logic, process, and function, the DRY principle provides fundamental guidance to software developers and aids the creation of simpler, more maintainable, higher-quality applications. 
+While there are scenarios where repetition can be necessary to meet performance or other requirements (e.g., data denormalization in a database), it should be used only where it directly addresses an actual rather than an imagined problem.
+
+ໃນກໍລະນີຫຼັກການ DRY ປະຍຸກໃຊ້ໃຫ້ໂຄງສ້າງ, ການຕາມເຫດຜົນ, ຂັ້ນຕອນ ແລະ function, ຫຼັກການ DRY ມອບການແນະນຳພື້ນຖາມໃຫ້ນັກພັດທະນາຊອບແວ ແລະ ຊ່ວຍເຫຼືອການສ້າງແອັບພລິເຄຊັນທີ່ເປັນລຽບງ່າຍ, ບໍລິຫານງ່າຍ ແລະ ຄຸນນະພາບສູງ.
+ເຖິງແມ່ນວ່າມີກໍລະນີຄວາມຊ້ຳເປັນຄວາມຈຳເປັນເພື່ອຜົນສຳເລັດດີ ຫຼື ຄວາມຕ້ອງການອື່ນ (ຕົວຢ່າງ data denormalization ກົງກັນຂ້າມການກັບຄືນສູ່ສະພາບປົກກະຕິຂອງຖານຂໍ້ມູນ), ມັນຄວນຖືກນຳໃຊ້ເວລາມັນແກ້ໄຂບັນຫາແທ້ຈິງເທົ່ານັ້ນ ບໍ່ແມ່ນບັນຫາທີ່ຍັງບໍ່ມີ.
+
+
+By [Steve Smith](http://programmer.97things.oreilly.com/wiki/index.php/Steve_Smith)
