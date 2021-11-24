@@ -1,0 +1,78 @@
+---
+title: 'Comment Only What the Code Cannot Say ອະທິບາຍສິ່ງທີ່ໂຄດບອກບໍ່ໄດ້'
+date: '2018-08-15'
+tags: ['writings', 'book', 'reflection']
+draft: false
+---
+
+# Comment Only What the Code Cannot Say ອະທິບາຍສິ່ງທີ່ໂຄດບອກບໍ່ໄດ້
+
+The difference between theory and practice is greater in practice than it is in theory — an observation that certainly applies to comments. 
+In theory, the general idea of commenting code sounds like a worthy one: Offer the reader detail, an explanation of what's going on. 
+What could be more helpful than being helpful? 
+In practice, however, comments often become a blight. 
+As with any other form of writing, there is a skill to writing good comments. 
+Much of the skill is in knowing when not to write them.
+
+ຄວາມແຕກຕ່າງຂອງທິດສະດີແລະຄວາມແທ້ຈິນໃນແທ້ຈິງມີຫຼາຍກວ່າໃນທິດສະດີ — ປັນຍາທົວໄປແມ່ນຖືກຕ້ອງສຳລັບການອະທິບາຍ. 
+ໃນທິດສະດີ, ແນວຄິດທົ່ວໄປທີ່ເພີ່ມຄຳອະທິບາຍໃຫ້ໂຄດຍິນວ່າມີປະໂຫຍດ: ມອບຜູ້ອ່ານລາຍລະອຽດ, ການອະທິບາຍກ່ຽວກັບມີຫຍັງເກີດຂຶ້ນ.
+ມີຫຍັງເປັນການຊ່ວຍເຫຼືອຫຼາຍກວ່ານອກຈາກການເປັນການຊ່ວຍເຫຼືອ?
+ໃນແທ້ຈິງແລ້ວ, ແຕ່ວ່າ, ຄຳອະທິບາຍເລື່ອຍໆເປັນຄວາມຫຍຸ້ງຍາກ.
+ຄື່ກັນກັບການຂຽນແບບອື່ນ, ມີທັກສະດ້ານການຂຽນຄຳອະທິບາຍທີ່ຮຽນໄດ້. 
+ທັກສະນັ້ນສ່ວນໃຫຍ່ແມ່ນຄວາມຮູ້ຈັກເງື່ອນໄຂທີ່ຫຼີກຂຽນຄຳອະທິບາຍ. 
+
+When code is ill-formed, compilers, interpreters, and other tools will be sure to object. 
+If the code is in some way functionally incorrect, reviews, static analysis, tests, and day-to-day use in a production environment will flush most bugs out. 
+But what about comments? In The *Elements of Programming Style* Kernighan and Plauger noted that "a comment is of zero (or negative) value if it is wrong." 
+And yet such comments often litter and survive in a code base in a way that coding errors never could. 
+They provide a constant source of distraction and misinformation, a subtle but constant drag on a programmer's thinking.
+
+
+ໃນກໍລະນີໂຄດມີໂຄງສ້າງບໍ່ດີ, compilers​ (ຜູ້ລວບລວມ), interpreters (ລ່າມແປພາສາ), ແລະ ເຄື່ອງມືອື່ນຈະ ຊີ້ໃຫ້ເຫັນ.
+ຖ້າວ່າໂຄມເຮັດວຽກຜິດໂດຍວິທີໃດວິທີໜຶ່ງ, ກວດເບິ່ງໂຄດດ້ວຍນັກພັດທະນາອື່ນ, ການວິເຄາະໂຄດສະຖິດ, ທົດສອບ, ແລະ ການນຳໃຊ້ແຕ່ລະມື້ໃນສະພາບແວດລ້ອມໃຊ້ຕົວຈິງ ຈະລຶບ bugs (ບັນຫາ) ອອກ.
+ແຕ່ວ່າຄຳອະທິບາຍແດ່? ໃນປຶ້ມ *ປັດໄຈຂອງແບບຂຽນໂຄດ* Kernighan ແລະ Plauger ໄດ້ຂຽນວ່າ "ຖ້າວ່າຄຳອະທິບາຍແມ່ນບໍ່ຖືກຕ້ອງ,ມັນມີຄຸມຄ່າສູນ(ຫຼືລົບ)."
+ແລະ ຄຳອະທິບາຍແບບນັ້ນຊະຊາຍແລະລອດຊີວິດໃນໂຄດ,ມັນຕ່າງກັນກັບການຜິດຂອງໂຄດ.
+ຄຳອະທິບາຍອຸປະຖຳຕົ້ນກຳເນີດຂອງລົບກວນ ແລະ ການໃຫ້ຂ່າວສານຜິດສະເໝີ, ມັນໃຫ້ຄວາມຄິດຂອງຄົນພັດທະນາສັບສົນ, ຢ່າງນ້ອຍໆ ແລະ ສະເໝີ.
+
+
+What of comments that are not technically wrong, but add no value to the code? Such comments are noise. 
+Comments that parrot the code offer nothing extra to the reader — stating something once in code and again in natural language does not make it any truer or more real. 
+Commented-out code is not executable code, so it has no useful effect for either reader or runtime. 
+It also becomes stale very quickly. 
+Version-related comments and commented-out code try to address questions of versioning and history. 
+These questions have already been answered (far more effectively) by version control tools.
+
+ໃນກໍລະນີແບບນີແດ່, ກໍລະນີທີ່ຄຳອະທິບາຍບໍ່ແມ່ນຜິດໃນທັດສະນະຂອງວິສະວະກຳ,ແຕ່ບໍ່ເພີ່ມຄຸ່ນຄ່າຕື່ມໃຫ້ແກ່ໂຄດ? ຄຳອະທິບາຍແບບນີ້ແມ່ນສຽງລົບກວນ.
+ຄຳອະທິບາຍທີ່ເວົ້າຕາມຫຼັງໂຄດເອົາໃຫ້ບໍ່ມີຫຍັງໃຫ້ແກ່ຜູ້ອ່ານ — ກ່າວເຖິງອັນໃດອັນໜຶ່ງໃນໂຄດ ແລ້ວ ກ່າວເຖິງນັ້ນໃນພາສາທຳມະດາອີກເທື່ອໜຶ່ງ, ມັນບໍ່ໃຫ້ເຮັດນັ້ນແທ້ຈິງຫຼາຍກ່ວາ ຫຼື ຖືກຕ້ອງຫຼາຍກ່ວາ.
+ໂຄດທີ່ໄດ້ເຮັດເຮັດເປັນຄຳອະທິບາຍ (Commented-out code) ບໍ່ແມ່ນໂຄດທີ່ປະຕິບັດ, ສະນັ້ນບໍ່ມີຜົນກະທົບຢ່າງເປັນປະໂຫຍດໃຫ້ແກ່ຜູ່ອ່ານຫຼືຣັນທາມ (runtime).
+ມັນຈະເນົ່າຢ່າງໄວໆ. 
+ຄຳອະທິບາຍກ່ຽວກັບປະຫວັດສະບັບ ແລະ ໂຄດທີ່ໄດ້ເຮັດເຮັດເປັນຄຳອະທິບາຍ ພະຍາຍາມເພື່ອຕອບຄຳຖາມຂອງສະບັບ ແລະ ປະຫວັດ.
+ຄຳຖາມເຫຼົ່ານີ້ມີຄຳຕອບແລ້ວ (ຢ່າງມີປະສິດທິພາບຫຼາຍ), ຄຳຕອບແມ່ນເຄື່ອງມືການຄວບຄຸມປະຫວັດສະບັບ.
+
+A prevalence of noisy comments and incorrect comments in a code base encourage programmers to ignore all comments, either by skipping past them or by taking active measures to hide them. 
+Programmers are resourceful and will route around anything perceived to be damage: folding comments up; switching coloring scheme so that comments and the background are the same color; scripting to filter out comments. 
+To save a code base from such misapplications of programmer ingenuity, and to reduce the risk of overlooking any comments of genuine value, comments should be treated as if they were code. 
+Each comment should add some value for the reader, otherwise it is waste that should be removed or rewritten.
+
+ການແຜ່ກວ້າງຂອງຄຳອະທິບາຍວຸນວາຍ ແລະ ຄຳອະທິບາຍຜິດໃນໂຄດໂປລກລມເຮັດໃຫ້ນັກພັດທະນາລ່ວງຄຳອະທິບາຍທັງມວນ, ດ້ວຍຜ່ານໄປຄຳອະທິບາຍ ຫຼື ດ້ວຍເຊື່ອງຄຳອະທິບາຍ.
+ນັກພັດທະນາມີທັກສະ ແລະ ຊິຖືວ່າຄຳອະທິບາຍອ້ອມໂຄດເປັນຄວາມເສຍຫາຍ: ເຊື່ອງຄຳອະທິບາຍ; ປັບປຸງການກຳນົດສີແລະເຮັດຄຳອະທິບາຍ ແລະ ເບື້ອງຫຼັງມີສີດຽວກັນ; ປະທິບັດຄຳສັ່ງເພື່ອເອົາຄຳອະທິບາຍອອກ.
+ເພື່ອຮັກສາໂຄດຈາກການນຳໃຊ້ຜິດຂອງທັກສະນັກພັດທະນາ,ແລະເພື່ອເຮັດໃຫ້ການສ່ຽງໄພນ້ອຍລົງ, ການສ່ຽງໄພຂອງການເບິ່ງຂ້າມຄຳອະທິບາຍອັນໃດອັນໜຶ່ງທີ່ມີຄ່າ,ຄຳອະທິບາຍຄວນເປັນຖືວ່າຄຳອະທິບາຍແມ່ນໂຄດ.
+ຄຳອະທິບາຍແຕ່ລະອັນຄວນເປັນເພີ່ມຂຶ້ນຄ່າໃຫ້ແກ່ຜູ້ອ່ານ, ຖ້າບໍ່ແມ່ນ,ຄຳອະທິບາຍແມ່ນຂີ້ເຫຍື້ອ ແລະ ຄວນເປັນເອົາອອກ ຫຼື ຊຽນໃໝ່.
+
+What then qualifies as value? Comments should say something code does not and cannot say. 
+A comment explaining what a piece of code should already say is an invitation to change code structure or coding conventions so the code speaks for itself. 
+Instead of compensating for poor method or class names, rename them. 
+Instead of commenting sections in long functions, extract smaller functions whose names capture the former sections' intent. 
+Try to express as much as possible through code. 
+Any shortfall between what you can express in code and what you would like to express in total becomes a plausible candidate for a useful comment. 
+Comment what the code cannot say, not simply what it does not say.
+
+ຄັນຊັ້ນ, ຄວາມໝາຍຂອງຄຳອະທິບາຍແມ່ນຫຍັງ? ຄຳອະທິບາຍຄວນເວົ້າສິ່ງທີ່ໂຄດບໍ່ເວົ້າແລະເວົ້າບໍ່ໄດ້.
+ຄຳອະທິບາຍທີ່ອະທິບາຍໂຄດສ່ວນໜຶ່ງບອກແລ້ວ ແມ່ນການເຊີນນັກພັດທະນາປ່ຽນໂຄງສ້າງຂອງໂຄດ ຫຼື ຮີດຄອງຂອງວິທີຂຽນໂຄດ ເຮັດໃຫ້ໂຄດເວົ້າຕົນເອງ.
+ກຳນົດຊື່ໃໝ່ແທນທີ່ການຊົດເຊີຍຊື່ method ຫຼື class ທີ່ບໍ່ດີ.
+ແປ່ງແຍກໂຄດ ແລະ ສ້າງ function ນ້ອຍທີ່ມີຊື່ຄວາມຕັ້ງໃຈແທນທີ່ການອະທິບາຍພາກສ່ວນໂຄດໃນ function ໃຫຍ່.
+ອະທິບາຍດ້ວຍໂຄດຫຼາຍເທົ່າທີ່ເປັນໄປໄດ້. 
+ຊ່ອງຫວ່າງລະຫວ່າງສິ່ງທີ່ເຈົ້າສາມາດອະທິບາຍດ້ວຍໂຄດ ແລະ ສິ່ງທີ່ເຈົ້າຢາກອະທິບາຍໃນຈໍານວນທັງຫມົດ ເປັນທາງເລືອກທີ່ດີເພື່ອຄຳອະທິບາຍມີປະໂຫຍດ.
+ອະທິບາຍສິ່ງທີ່ໂຄດບໍ່ສາມາດບອກ, ບໍ່ແມ່ນສິ່ງທີ່ໂຄດບໍ່ໄດ້ບອກ.
+
+By [Kevlin Henney](http://programmer.97things.oreilly.com/wiki/index.php/Kevlin_Henney)
